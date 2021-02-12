@@ -1,0 +1,184 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Lexend Mega', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* Left Slide */
+
+#leftSlide{
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    width: 20vw;
+    background-color: yellow;
+}
+
+/* Nav bar */
+nav{
+    display: flex;
+    flex-direction: row;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    position: fixed;
+    width: 100vw;
+}
+
+nav::before{
+    content: '';
+    z-index: -1;
+    background-color: rgb(214, 214, 214);
+    height: 55px;
+    width: 100vw;
+    position: absolute;
+    top: 0%;
+}
+
+nav button{
+    background-color: transparent;
+    border: none;
+    font-size: 21px;
+    margin-left: 11%;
+    /* size: ; */
+    z-index: 1;
+}
+nav button:hover{
+    cursor: pointer;
+}
+nav button:focus{
+    outline: none;
+}
+#heading{
+    width:fit-content;
+    position: absolute;
+    /* margin-left: 45vw; */
+    letter-spacing: .02em;
+    width: 100%;
+    text-align: center;
+    align-self: center;
+}
+#heading p span{
+    color: orange;
+}
+.openLeft:focus{
+    outline: none;
+}
+.openLeft:hover{
+    cursor: pointer;
+}
+.Cart{
+    float: right;
+    margin-left: auto;
+    margin-right: 12%;
+}
+
+/*Welcome page*/
+#welcome_page{
+
+    height: 100vh;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    align-self: center;
+}
+#shop_now{
+    position: relative;
+    height: fit-content;
+    width: 42%;
+    top: 30%;
+    text-align: center;
+    background-color: white;
+    opacity: 0.7;
+    font-size: 25px;
+    padding: 20px;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto auto;
+}
+#shop_now button{
+
+    color: black;
+    margin: 20px;
+    padding: 10px;
+    background-color: rgb(252, 167, 71);
+    border: none;
+    border: 0.5px solid black;
+    opacity: 1;
+    transition: transform 1s;
+    transform-origin: center;
+    text-decoration: none;
+}
+
+#shop_now button a{
+    color: black;
+    text-decoration: none;
+}
+
+#shop_now button a:hover{
+    color: white;
+    /* text-decoration: none; */
+    font-weight: bolder;
+
+}
+
+#shop_now button:focus{
+    outline: none;
+}
+
+#welcome_page::before{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    background: url('../images/hero-bcg.jpeg') center center no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/* Product display */
+
+#product_display h1{
+    text-align: center;
+    padding-top: 4%;
+    padding-bottom: 3.5%;
+}
+.products{
+    display: flex;
+    flex-direction: row;
+    padding-left: 10%;
+    padding-right: 10%;
+    flex-wrap: wrap;
+    margin-left: 3.1%;
+    margin-right: auto;
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+    text-align: center;
+    /* padding-top: 10px; */
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 20px;
+    /* background-color: khaki; */
+    margin: 0.1%;
+}
+.product:hover{
+    cursor: pointer;
+}
+.product img{
+    height: 170px;
+    width: 240px;
+}
+.product :nth-child(3){
+    color: orange;
+}
+.product p{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
