@@ -5,27 +5,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Js Shopping Templete!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    <div id="leftSlide">
-        <button>x</button>
-        <div class="links">
-            <a href="#">Login</a>
-            <a href="#">Special Discounts</a>
-            <a href="#">End month offers!</a>
+    <div id="leftSlide" style="width: 0px;">
+        <button id="closebutton" onclick="closeSLideBar()">
+            <?xml version="1.0" encoding="iso-8859-1"?>
+            <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+            <g>
+                <g>
+                    <polygon points="512,59.076 452.922,0 256,196.922 59.076,0 0,59.076 196.922,256 0,452.922 59.076,512 256,315.076 452.922,512 
+                        512,452.922 315.076,256 		"/>
+                </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g>
+            </g><g></g><g></g><g></g></svg>
+        </button>
+        <div id="user_img">
+            <img id="innerImg" src="./images/user_img.jpg" alt="user_image">
+        </div>
+        <div id="links">
+            <a href="#"><i class="bi bi-house-fill"></i>Home</a>
+            <a href="#"><i class="bi bi-envelope-fill"></i>Login/SignUp</a>
+            <a href="#"><i class="bi bi-gift-fill"></i>Special Discounts</a>
+            <a href="#"><i class="bi bi-emoji-smile-fill"></i>End month offers!</a>
+        </div>
+        <div id="copyrights">
+            <p>All copyrights are reserved&copy;</p>
         </div>
     </div>
-    <nav>
+
+    <div id="RightSlide" style="display: block;">
+        <button id="close" onclick="closeRightSlide()" type="button">
+        <?xml version="1.0" encoding="iso-8859-1"?>
+            <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+            <g>
+                <g>
+                    <polygon points="512,59.076 452.922,0 256,196.922 59.076,0 0,59.076 196.922,256 0,452.922 59.076,512 256,315.076 452.922,512 
+                        512,452.922 315.076,256 		"/>
+                </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g>
+            </g><g></g><g></g><g></g></svg>
+        </button>
+        <p id="cart-title">Your<span style="color: orange;">Cart</span></p>
+
+        <!-- It is the cart to show all the product which customer buy -->
+        <div id="all_items">
+        </div>
+        
+        <div id="emptycart" onclick="emptyCart()"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13"
+            fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+            <path
+                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+        </svg>Clear Cart</div>
+    </div>
+        
+        <nav>
         <button class="openLeft" type="button" onclick="openLeftSide()">☰</button>
         <div id="heading">
             <p>Comfy<span>House</span></p>
         </div>
-        <button class="Cart" onclick="openLeftSide()"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-          </svg>My Cart</button>
+        <button class="Cart" onclick="openRightSide()">
+            <i><p id="cart_items">0</p></i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                <path
+                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+            </svg>My Cart</button>
     </nav>
     <section id="welcome_page">
         <div id="shop_now">
@@ -39,4 +91,5 @@
 </body>
 <!-- <script type="text/javascript" src="./products.json"></script> -->
 <script type="text/javascript" src="./js/script.js"></script>
+
 </html>
