@@ -68,6 +68,13 @@ nav button{
     height: fit-content;
     left: 10px;
 }
+.details button{
+    color: red;
+    cursor: pointer;
+}
+.incr_decr button svg{
+    fill: orange;
+}
 
 /* Welcome page */
 
