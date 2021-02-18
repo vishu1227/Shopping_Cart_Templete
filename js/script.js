@@ -77,7 +77,7 @@ function openRightSide()
     }
     else{
         rightSlide.style.width='500px';
-        document.getElementById('all_items').style.height='500px'
+        document.getElementById('all_items').style.height='480px'
     }
 
     document.getElementById('close').style.display='block';
