@@ -75,6 +75,10 @@ nav button{
 .incr_decr button svg{
     fill: orange;
 }
+#close svg{
+    fill: white;
+    background-color: orange;
+}
 
 /* Welcome page */
 
