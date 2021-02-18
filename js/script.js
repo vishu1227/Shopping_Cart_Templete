@@ -421,7 +421,7 @@ function openRightSide()
     else if(screen.width<=460)
     {
         rightSlide.style.width='90vw';
-        document.getElementById('all_items').style.height='80vh'
+        document.getElementById('all_items').style.height='70vh'
     }
     else{
 
