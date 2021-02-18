@@ -61,11 +61,18 @@ ShowProducts()
 function openLeftSide()
 {
     let Slide=document.getElementById('leftSlide')
-    Slide.style.width='20vw'
+
+    if(screen.width<460)
+    {
+        Slide.style.width='205px'
+    }
+    else{
+        Slide.style.width='260px'
+    }
     Slide.style.display='block'
 
     let img=document.getElementById('innerImg')
-    img.style.width='12vw'
+    img.style.width='100px'
 
     let Cbtn=document.getElementById('closebutton')
     Cbtn.style.display='block'
@@ -404,11 +411,34 @@ function closeRightSlide()
     rightSlide.style.paddingRight='0px'
 }
 
+console.log(screen.width)
+
 function openRightSide()
 {
     let rightSlide=document.getElementById('RightSlide');
 
-    rightSlide.style.width='40vw';
+    
+    if(screen.width>460 && screen.width<690)
+    {
+        console.log('Yes if was called!')
+        rightSlide.style.width='350px';
+
+        document.getElementById('all_items').style.height='370px'
+    }
+    else if(screen.width<=460)
+    {
+        console.log('Yes else if was called!')
+
+        let w=screen.width;
+
+        rightSlide.style.width='90vw';
+        document.getElementById('all_items').style.height='370px'
+    }
+    else{
+        console.log('else is called')
+        rightSlide.style.width='500px';
+        document.getElementById('all_items').style.height='500px'
+    }
 
     document.getElementById('close').style.display='block';
 
