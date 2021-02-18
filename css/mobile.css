@@ -39,6 +39,10 @@ nav button{
     margin-left: 45px;
     margin-right: auto;
 }
+#leftSlide button svg{
+    fill: white;
+    background-color: orange;
+}
 
 /* Right Slide */
 #RightSlide{
