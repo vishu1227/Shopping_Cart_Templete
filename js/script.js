@@ -365,7 +365,9 @@ function displayCart()
     let cartArray=shoppingCart.listCart()
 
     let output=''
-
+    
+    let totalcost=0;
+    
     for(var i in cartArray)
     {
 
@@ -374,7 +376,9 @@ function displayCart()
         let count=cartArray[i].count;
         let total_cost=cartArray[i].total;
         let title=cartArray[i].name;
-
+        
+        totalcost+=Number(total_cost);
+        
         output+=`<div class="cart-product">
         <img src="${img_url}" alt="">
         <div class="details">
@@ -399,7 +403,8 @@ function displayCart()
         </div>
         </div>`
     }
-
+    
+    document.getElementById('t_cost').innerHTML=`&dollar;${totalcost}`
     document.getElementById('all_items').innerHTML=output;
 }
 displayCart()
