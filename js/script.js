@@ -73,7 +73,7 @@ function openRightSide()
         let w=screen.width;
 
         rightSlide.style.width='90vw';
-        document.getElementById('all_items').style.height='80vh'
+        document.getElementById('all_items').style.height='70vh'
     }
     else{
         rightSlide.style.width='500px';
