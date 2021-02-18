@@ -1,3 +1,4 @@
+/* Nav bar */
 nav{
     padding-top: 7px;
 }
@@ -15,57 +16,17 @@ nav button{
     height: 1em;
     width: 1em;
 }
-#heading{
-    font-size: 0.8em;
-}
 .Cart i{
     margin-left: 2px;
     padding: none;
-}
-#shop_now h1{
-    font-size: 0.7em;
-}
-.product{
-    height: fit-content;
-    width: fit-content;
-    font-size: 1em;
-}
-.product img{
-    height: 100%;
-    width: 100%;
-}
-.product p{
-    font-size: 0.8em;
-}
-#product_display h1{
-    font-size: 1em;
-}
-
-#shopNow a{
-    font-size: 0.7em;
-}
-
-#shop_now button{
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.product button{
-    font-size: 0.7em;
-}
-.product button svg{
-    height: 0.9em;
-    width: 0.9em;
 }
 #heading{
     text-align: left;
     width: fit-content;
     margin-left: 25px;
 }
-#product_display{
-    padding-left: 0%;
-    padding-right: 0%;
-}
+
+/* Left slide */
 
 #leftSlide a{
     font-size: 0.7em;
@@ -79,6 +40,7 @@ nav button{
     margin-right: auto;
 }
 
+/* Right Slide */
 #RightSlide{
     padding-right: 0px;
     font-size: 0.7em;
@@ -105,4 +67,54 @@ nav button{
     /* margin-left: 3px; */
     height: fit-content;
     left: 10px;
+}
+
+/* Welcome page */
+
+#heading{
+    font-size: 0.8em;
+}
+
+#shop_now h1{
+    font-size: 0.7em;
+}
+#shopNow a{
+    font-size: 0.7em;
+}
+#shop_now button{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* Products Display */
+
+.product{
+    height: fit-content;
+    width: fit-content;
+    font-size: 1em;
+}
+.product img{
+    height: 100%;
+    width: 100%;
+}
+.product p{
+    font-size: 0.8em;
+}
+#product_display h1{
+    font-size: 1em;
+}
+.product button{
+    font-size: 0.7em;
+}
+.product button svg{
+    height: 0.9em;
+    width: 0.9em;
+}
+
+#product_display{
+    padding-left: 0%;
+    padding-right: 0%;
+}
+.product:hover{
+    box-shadow: 0px 0px 0px -0px #999;
 }
