@@ -1,4 +1,3 @@
-console.log('Connected!')
 
 function getProduct(title,price,url)
 {
@@ -27,8 +26,6 @@ async function getJSON()
 
 function ShowProducts()
 {
-    // console.log(jData.items)
-
     const products=document.createElement('div')
 
     products.className='products'
@@ -46,7 +43,6 @@ function ShowProducts()
   
           prod.innerHTML=getProduct(product_name,price,img_url)
           
-          // console.log(prod)          
           products.appendChild(prod)
       }
     })
@@ -96,7 +92,7 @@ function closeSLideBar()
 
     let links_Box=document.getElementById('links')
     links_Box.style.display='none'
-    // links_Box.style.width='20vw'
+
 
     let copyrights=document.getElementById('copyrights')
     copyrights.style.display='none'
@@ -411,8 +407,6 @@ function closeRightSlide()
     rightSlide.style.paddingRight='0px'
 }
 
-console.log(screen.width)
-
 function openRightSide()
 {
     let rightSlide=document.getElementById('RightSlide');
@@ -420,22 +414,17 @@ function openRightSide()
     
     if(screen.width>460 && screen.width<690)
     {
-        console.log('Yes if was called!')
         rightSlide.style.width='350px';
 
         document.getElementById('all_items').style.height='370px'
     }
     else if(screen.width<=460)
     {
-        console.log('Yes else if was called!')
-
-        let w=screen.width;
-
         rightSlide.style.width='90vw';
         document.getElementById('all_items').style.height='370px'
     }
     else{
-        console.log('else is called')
+
         rightSlide.style.width='500px';
         document.getElementById('all_items').style.height='500px'
     }
