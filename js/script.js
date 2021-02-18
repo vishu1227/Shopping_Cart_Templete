@@ -1,3 +1,95 @@
+// Left and Right Slider
+
+function openLeftSide()
+{
+    let Slide=document.getElementById('leftSlide')
+
+    if(screen.width<460)
+    {
+        Slide.style.width='205px'
+    }
+    else{
+        Slide.style.width='260px'
+    }
+    Slide.style.display='block'
+
+    let img=document.getElementById('innerImg')
+    img.style.width='100px'
+
+    let Cbtn=document.getElementById('closebutton')
+    Cbtn.style.display='block'
+
+    let links_Box=document.getElementById('links')
+    links_Box.style.display='flex'
+
+    let copyrights=document.getElementById('copyrights')
+    copyrights.style.display='block'
+}
+function closeSLideBar()
+{
+    let Slide=document.getElementById('leftSlide')
+    Slide.style.width='0vw'
+
+    let img=document.getElementById('innerImg')
+    img.style.width='0vw'
+
+    let Cbtn=document.getElementById('closebutton')
+    Cbtn.style.display='none'
+
+    let links_Box=document.getElementById('links')
+    links_Box.style.display='none'
+    // links_Box.style.width='20vw'
+
+    let copyrights=document.getElementById('copyrights')
+    copyrights.style.display='none'
+}
+closeSLideBar()
+
+function closeRightSlide()
+{
+    let rightSlide=document.getElementById('RightSlide');
+
+    rightSlide.style.width='0px';
+
+    document.getElementById('close').style.display='none';
+
+    rightSlide.style.paddingLeft='0px'
+    rightSlide.style.paddingRight='0px'
+}
+
+function openRightSide()
+{
+    let rightSlide=document.getElementById('RightSlide');
+
+    
+    if(screen.width>460 && screen.width<690)
+    {
+        rightSlide.style.width='350px';
+
+        document.getElementById('all_items').style.height='370px'
+    }
+    else if(screen.width<=460)
+    {
+        let w=screen.width;
+
+        rightSlide.style.width='90vw';
+        document.getElementById('all_items').style.height='80vh'
+    }
+    else{
+        rightSlide.style.width='500px';
+        document.getElementById('all_items').style.height='500px'
+    }
+
+    document.getElementById('close').style.display='block';
+
+    rightSlide.style.paddingLeft='20px'
+    rightSlide.style.paddingRight='20px'
+
+}
+
+closeRightSlide()
+
+// Fetching the products and displaying 
 
 function getProduct(title,price,url)
 {
@@ -54,54 +146,8 @@ function ShowProducts()
 
 ShowProducts()
 
-function openLeftSide()
-{
-    let Slide=document.getElementById('leftSlide')
 
-    if(screen.width<460)
-    {
-        Slide.style.width='205px'
-    }
-    else{
-        Slide.style.width='260px'
-    }
-    Slide.style.display='block'
-
-    let img=document.getElementById('innerImg')
-    img.style.width='100px'
-
-    let Cbtn=document.getElementById('closebutton')
-    Cbtn.style.display='block'
-
-    let links_Box=document.getElementById('links')
-    links_Box.style.display='flex'
-
-    let copyrights=document.getElementById('copyrights')
-    copyrights.style.display='block'
-}
-function closeSLideBar()
-{
-    let Slide=document.getElementById('leftSlide')
-    Slide.style.width='0vw'
-
-    let img=document.getElementById('innerImg')
-    img.style.width='0vw'
-
-    let Cbtn=document.getElementById('closebutton')
-    Cbtn.style.display='none'
-
-    let links_Box=document.getElementById('links')
-    links_Box.style.display='none'
-
-
-    let copyrights=document.getElementById('copyrights')
-    copyrights.style.display='none'
-}
-closeSLideBar()
-
-
-
-
+// Cart functioning
 
 
 //It like a class whith only one object beacuse of the only one cart
@@ -394,46 +440,3 @@ function decrement(ele)
     document.getElementById('cart_items').innerHTML=shoppingCart.totalCount()
     displayCart()
 }
-
-function closeRightSlide()
-{
-    let rightSlide=document.getElementById('RightSlide');
-
-    rightSlide.style.width='0px';
-
-    document.getElementById('close').style.display='none';
-
-    rightSlide.style.paddingLeft='0px'
-    rightSlide.style.paddingRight='0px'
-}
-
-function openRightSide()
-{
-    let rightSlide=document.getElementById('RightSlide');
-
-    
-    if(screen.width>460 && screen.width<690)
-    {
-        rightSlide.style.width='350px';
-
-        document.getElementById('all_items').style.height='370px'
-    }
-    else if(screen.width<=460)
-    {
-        rightSlide.style.width='90vw';
-        document.getElementById('all_items').style.height='70vh'
-    }
-    else{
-
-        rightSlide.style.width='500px';
-        document.getElementById('all_items').style.height='500px'
-    }
-
-    document.getElementById('close').style.display='block';
-
-    rightSlide.style.paddingLeft='20px'
-    rightSlide.style.paddingRight='20px'
-
-}
-
-closeRightSlide()
